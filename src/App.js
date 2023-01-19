@@ -17,16 +17,16 @@ function App() {
     
     <Routes>
       
-      <Route path="/" element={<Home />} />
+      <Route path="/React-Eccom-Frontend" element={<Home />} />
 
       
       <Route path="/register" element= {user ? (
-        <Navigate to="/" />
+        <Navigate to="/React-Eccom-Frontend" />
       ) : ( 
         <Register />
       ) } />
       <Route path="/login" element={user ? (
-        <Navigate to="/" />
+        <Navigate to="/React-Eccom-Frontend" />
       ) : ( 
         <Login />
       ) } />
