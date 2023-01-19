@@ -17,7 +17,7 @@ function App() {
     
     <Routes>
       
-      <Route path="/eccomfrontend" element={<Home />} />
+      <Route path="/" element={<Home />} />
 
       
       <Route path="/register" element= {user ? (

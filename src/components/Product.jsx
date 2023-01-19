@@ -1,4 +1,4 @@
-import { SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material';
+import { ShoppingCartOutlined } from '@mui/icons-material';
 // import { ListItem } from '@mui/material';
 import React from 'react'
 import styled from 'styled-components';
