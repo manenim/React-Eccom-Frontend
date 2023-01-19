@@ -110,9 +110,9 @@ const Product = ({item}) => {
               <Info>
 
                       <Icon><ShoppingCartOutlined onClick = {handleClick}/></Icon>
-                      <Link to = {`/product/${item._id}`}>
+                      {/* <Link to = {`/product/${item._id}`}>
                       <Icon><SearchOutlined /></Icon>
-                      </Link>
+                      </Link> */}
                       <Icon>< FavoriteBorderIcon/></Icon>
               </Info>
           </Container>
