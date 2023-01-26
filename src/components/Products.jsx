@@ -77,16 +77,20 @@ const Products = ({cat, filters, sort}) => {
    if (products.length === 0) {
     return (
       <Center>
-        <FidgetSpinner
-          visible={true}
-          height="80"
-          width="80"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper"
-          ballColors={['#ddc9c9', '#008080', '#ddc9c9']}
-          backgroundColor="#008080"
-        />
+        <div>
+
+          <FidgetSpinner
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
+            ballColors={['#ddc9c9', '#008080', '#ddc9c9']}
+            backgroundColor="#008080"
+          />
+          <p>Fetching Products...</p>
+        </div>
       </Center>
     )
   }
