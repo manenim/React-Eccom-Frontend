@@ -102,7 +102,7 @@ const Navbar = () => {
               <SearchIcon style = {{color: "gray", fontSize: 16}}/>
             </SearchContainer>
           </Left> */}
-          <Center><Link to = "/"><Logo>SHOPnOW.</Logo></Link></Center>
+          <Center><Link to = "/"><Logo>Shopnow.</Logo></Link></Center>
           <Right>
 
           <Link to = "/cart">

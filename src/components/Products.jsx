@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Product from './Product';
 import axios from 'axios';
+import { FidgetSpinner } from 'react-loader-spinner';
 
 const Container = styled.div`
   padding: 20px;
@@ -9,6 +10,17 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `;
+
+const Center = styled.div`
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+
+
 
 
 const Products = ({cat, filters, sort}) => {
@@ -60,7 +72,26 @@ const Products = ({cat, filters, sort}) => {
       );
     }
   }, [sort]);
+
   
+   if (products.length === 0) {
+    return (
+      <Center>
+        <FidgetSpinner
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper"
+          ballColors={['#ddc9c9', '#008080', '#ddc9c9']}
+          backgroundColor="#008080"
+        />
+      </Center>
+    )
+  }
+
+
   return (
     <Container>
         {cat ? filteredproducts.map(item => (

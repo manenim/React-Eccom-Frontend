@@ -12,9 +12,15 @@ const Container = styled.div`
   
 `;
 
+const Smallcont = styled.div`
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+`;
+
 const Title = styled.h1`
   margin: 20px;
-  margin-top: 0;
+  margin-top: 24px;
   text-transform: capitalize;
 `;
 const FilterContainer = styled.div`
@@ -72,15 +78,18 @@ const ProductList = () => {
   const back = () => {
     navigate(-1)
   }
-console.log(filters);
+
+ 
+    
   return (
     <Container>
 
         <Navbar/>
-        <Announcements/>
+      <Announcements />
+      <Smallcont>
         <Icon onClick = {back}/>
-
         <Title>{cat}</Title>
+      </Smallcont>
         <FilterContainer>
             <Filter>
                 <FilterText>Filter Products:</FilterText>
