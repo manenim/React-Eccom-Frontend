@@ -134,6 +134,7 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
+  const [cartText, setCartText] = useState("Add to Cart")
   const dispatch = useDispatch()
   const navigate = useNavigate();
 
@@ -164,9 +165,7 @@ const Product = () => {
   const handleClick = async () => {
     dispatch(addProduct({...product, quantity, color, size}))
     document.getElementById("myBtn").disabled = true;
-
-    console.log(quantity)
-     
+    setCartText("Added to Cart")
   }
 
   const back = () => {
@@ -210,7 +209,7 @@ const Product = () => {
               <Amount>{quantity}</Amount>
               <Add onClick = {() => handleQuantity("inc")}/>
             </AmountContainer>
-            <Button id = "myBtn" onClick = {handleClick}>ADD TO CART</Button>
+            <Button id="myBtn" onClick={handleClick}>{ cartText }</Button>
 
           </AddContainer>
             {/* <TopButton move = "move" onClick = {back}>CONTINUE SHOPPING</TopButton> */}
